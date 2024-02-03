@@ -1,0 +1,116 @@
+package coding.project;
+
+import java.util.Arrays;
+
+public class CodingProjectWeek4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		/* 1. Create an array of int called ages that contains the following values: 3, 9, 23, 64, 2, 8, 28, 93.
+
+		a. Programmatically subtract the value of the first element in the array from the value in the last element of the array (i.e. do not use ages[7] in your code). Print the result to the console.  
+
+		b. Create a new array of int called ages2 with 9 elements (ages2 will be longer than the ages array, and have more elements).  
+
+		i. Make sure that there are 9 elements of type int in this new array.  
+
+		ii. Repeat the subtraction from Step 1.a. (Programmatically subtract the value of the first element in the new array ages2 from the last element of ages2). 
+
+		iii. Show that using the index values for the elements is dynamic (works for arrays of different lengths).
+
+		c. Use a loop to iterate through the array and calculate the average age. Print the result to the console. */
+		
+		System.out.println(" ");
+		System.out.println("---------- Question 1 ----------");
+		System.out.println(" ");
+		
+		int [] ages = {3, 9, 23, 64, 2, 8, 28, 93};
+		System.out.println(Arrays.toString(ages));
+		
+		System.out.println(" ");
+		System.out.println("---------- Question 1  : A ----------");
+		System.out.println(" ");
+		
+		int subtractVal = ages[ages.length -1] - ages[0];
+		System.out.println(subtractVal);
+		
+		System.out.println(" ");
+		System.out.println("---------- Question 1  : B ----------");
+		System.out.println(" ");
+		
+		int [] ages2 = {22, 12, 6, 90, 7, 32, 13, 5, 72};
+		
+		System.out.println("The length of the array is: " + ages2.length);
+		
+		int subtractVal2 = ages2[ages2.length -1] - ages2[0];
+		System.out.println(subtractVal2);
+		
+		System.out.println(" ");
+		System.out.println("---------- Question 1  : C ----------");
+		System.out.println(" ");
+		
+		int sum = 0;
+		for (int number : ages2) {
+			sum += number;
+		}
+		int average = sum / ages2.length;
+		System.out.println(average);
+		
+		
+		/* 2. Create an array of String called names that contains the following values: “Sam”, “Tommy”, “Tim”, “Sally”, “Buck”, “Bob”.
+
+		a. Use a loop to iterate through the array and calculate the average number of letters per name. Print the result to the console.
+
+		b. Use a loop to iterate through the array again and concatenate all the names together, separated by spaces, and print the result to the console. */
+		
+		System.out.println(" ");
+		System.out.println("---------- Question 2 ----------");
+		System.out.println(" ");
+		
+		String [] names = new String[6];
+		
+		names[0]= "Sam";
+		names[1]= "Tommy";
+		names[2]= "Tim";
+		names[3]= "Sally";
+		names[4]= "Buck";
+		names[5]= "Bob";
+		
+		System.out.println(Arrays.toString(names));
+		
+		System.out.println(" ");
+		System.out.println("---------- Question 2 : A ----------");
+		System.out.println(" ");
+		
+		int stringSum = 0;
+		
+		for (String name : names) {
+			stringSum += name.length();
+		}
+		int stringAv = stringSum / names.length;
+		System.out.println(stringAv);
+		
+		System.out.println(" ");
+		System.out.println("---------- Question 2 : B ----------");
+		System.out.println(" ");
+		
+		String concatString = "";
+		for (String name : names) {
+			concatString += name + " ";
+		}
+		System.out.println(concatString);
+		
+		// 3. How do you access the last element of any array?
+		
+		System.out.println(" ");
+		System.out.println("---------- Question 3 ----------");
+		System.out.println(" ");
+		
+		// find the length of the array - 1 since java is 0 based.
+		
+		System.out.println(names.length - 1);
+		
+	}
+
+}

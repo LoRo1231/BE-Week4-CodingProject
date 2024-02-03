@@ -1,0 +1,50 @@
+package coding.project;
+
+import java.util.Arrays;
+
+public class CodingProjectWeek4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		/* 1. Create an array of int called ages that contains the following values: 3, 9, 23, 64, 2, 8, 28, 93.
+
+		a. Programmatically subtract the value of the first element in the array from the value in the last element of the array (i.e. do not use ages[7] in your code). Print the result to the console.  
+
+		b. Create a new array of int called ages2 with 9 elements (ages2 will be longer than the ages array, and have more elements).  
+
+		i. Make sure that there are 9 elements of type int in this new array.  
+
+		ii. Repeat the subtraction from Step 1.a. (Programmatically subtract the value of the first element in the new array ages2 from the last element of ages2). 
+
+		iii. Show that using the index values for the elements is dynamic (works for arrays of different lengths).
+
+		c. Use a loop to iterate through the array and calculate the average age. Print the result to the console. */
+		
+		System.out.println(" ");
+		System.out.println("---------- Question 1 ----------");
+		System.out.println(" ");
+		
+		int [] ages = {3, 9, 23, 64, 2, 8, 28, 93};
+		System.out.println(Arrays.toString(ages));
+		
+		System.out.println(" ");
+		System.out.println("---------- Question 1  : A ----------");
+		System.out.println(" ");
+		
+		int subtractVal = ages[ages.length -1] - ages[0];
+		System.out.println(subtractVal);
+		
+		System.out.println(" ");
+		System.out.println("---------- Question 1  : B ----------");
+		System.out.println(" ");
+		
+		int [] ages2 = {22, 12, 6, 90, 7, 32, 13, 5, 72};
+		
+		System.out.println(ages2.length);
+		
+		int subtractVal2 = ages2[ages2.length -1] - ages2[0];
+		System.out.println(subtractVal2);
+	}
+
+}
